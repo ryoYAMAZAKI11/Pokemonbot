@@ -48,4 +48,4 @@ async def on_message(message):
             
             await message.channel.send(message_send)
                 
-client.run("Njg2NDU5OTY3Mzk3NTYwMzQw.XmXhvQ.V4VYMjqWIatJHUM0HCNClNuLUaI")
+client.run("ここにトークン")
