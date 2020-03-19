@@ -3,6 +3,7 @@ import json
 from collections import OrderedDict
 import pprint
 import re
+import bot_token
 
 client = discord.Client()
 
@@ -48,4 +49,4 @@ async def on_message(message):
             
             await message.channel.send(message_send)
                 
-client.run("Njg2NDU5OTY3Mzk3NTYwMzQw.XnIx5A.xJAHDh6jJhp18VWMk6vfshYWK2o")
+client.run(bot_token.TOKEN)
