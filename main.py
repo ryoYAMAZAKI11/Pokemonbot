@@ -41,11 +41,13 @@ async def on_message(message):
                         message_send = message_send + '%3d'%(int(value))
                     else:    
                         message_send = message_send + '%4d'%(int(value))
+
+                message_send = message_send + "```"
             else:
                 message_send = "そんなポケモンはいません"
                     
 
-            message_send = message_send + "```"
+            
             
             await message.channel.send(message_send)
                 
