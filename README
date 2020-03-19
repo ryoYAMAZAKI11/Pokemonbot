@@ -1,1 +1,13 @@
-停止方法はプロセスを直接停止ます。“ps x”でpythonのPIDを確認し“kill”でプロセスを停止できます。
+ポケモン名を入力すると種族値を返してくれるdiscord bot です。
+
+[ポケモン名]の図鑑
+
+とテキストチャットに入力すると種族値を返してくれます。
+
+種族値のデータはこのページを元に作成しました。
+https://yakkun.com/swsh/stats_list.htm
+
+xserver でbotを常駐させたいので以下のサイトを参考にしました。
+https://ogapsan.com/archives/1077
+“python3 main.py”で起動するのではなく“nohup python3 main.py < /dev/null &”で起動します。
+停止方法はプロセスを直接停止します。“ps x”でpythonのPIDを確認し“kill”でプロセスを停止できます。
