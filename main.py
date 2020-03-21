@@ -43,9 +43,10 @@ async def on_message(message):
                         message_send = message_send + '%4d'%(int(value))
 
                 message_send = message_send + "```"
+                print('0 ' + m)
             else:
                 message_send = "そんなポケモンはいません"
-                    
+                print('1 ' + m)    
 
             
             
