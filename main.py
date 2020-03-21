@@ -9,10 +9,10 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-    # print('Logged in as')
-    # print(client.user.name)
-    # print(client.user.id)
-    # print('------')
+    print('Logged in as', file=sys.stderr)
+    print(client.user.name, file=sys.stderr)
+    print(client.user.id, file=sys.stderr)
+    print('------', file=sys.stderr)
     
 @client.event
 
