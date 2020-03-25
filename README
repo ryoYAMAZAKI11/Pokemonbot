@@ -13,7 +13,7 @@ https://ogapsan.com/archives/1077
 python3 main.py
 で起動するのではなく
 
-nohup python3 main.py 1> out.log 2> /dev/null &
+nohup python3 main.py 1>> out.log 2> /dev/null &
 で起動します。 out.logにはログが書き込まれます．
 
 停止方法はプロセスを直接停止します。
