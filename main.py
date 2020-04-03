@@ -21,17 +21,18 @@ async def on_ready():
 
 async def on_message(message):
     # 送り主がBotだった場合反応したくないので
-    if client.user != message.author:
-        return 
+    if message.author.bot:
+        return
     # 「図鑑」で始まるか調べる
-    elif message.content == 'ざこやまの図鑑':
+    if message.content == 'ざこやまの図鑑':
         message_send = "このbotの作成者ロト！" + "\n" + "不具合はtwitterで連絡するロト！"+ "\n" + "https://twitter.com/zakoyama_com"
+        
     elif re.match('.+の図鑑$', message.content):
         json_open = open('pokedex_zen.json', 'r')
         json_load = json.load(json_open)    
         # メッセージを書きます
         m = message.content[0:len(message.content)-3]
-            
+        
         # メッセージが送られてきたチャンネルへメッセージを送ります
         if m in json_load:
             message_send = "```"
@@ -45,13 +46,12 @@ async def on_message(message):
                 else:    
                     message_send = message_send + '%4d'%(int(value))
                     
-                    message_send = message_send + "```"
-                    print('0 ' + m)
+            message_send = message_send + "```"
+            print('0 ' + m)
         else:
             message_send = "ポケモンがみつからないロト！"
-            print('1 ' + m)    
-                 
+            print('1 ' + m)
             
     await message.channel.send(message_send)
-                
+    
 client.run(bot_token.TOKEN)
